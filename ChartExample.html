@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Highcharts Tutorial</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="http://code.highcharts.com/highcharts.js"></script>  
+   <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TH_ Polling Page</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+
+
+<script language="JavaScript">
+$(document).ready(function() {  
+   var chart = {
+       plotBackgroundColor: null,
+       plotBorderWidth: null,
+       plotShadow: false
+   };
+   var title = {
+      text: 'Poll Results'   
+   };      
+   var tooltip = {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+   };
+   var plotOptions = {
+      pie: {
+         allowPointSelect: true,
+         cursor: 'pointer',
+         dataLabels: {
+            enabled: false           
+         },
+         showInLegend: true
+      }
+   };
+    var series= [{
+      type: 'pie',
+      name: 'Browser share',
+      data: [
+         ['Firefox',   45.0],
+         ['IE',       26.8],
+         {
+            name: 'Chrome',
+            y: 12.8,
+            sliced: true,
+            selected: true
+         },
+         ['Safari',    8.5],
+         ['Opera',     6.2],
+         ['Others',   0.7]
+      ]
+   }];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;     
+   json.tooltip = tooltip;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   $('#container').highcharts(json);  
+});
+</script>
+</body>
+</html>

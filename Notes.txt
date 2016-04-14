@@ -1,0 +1,26 @@
+Basic Bootstap Tutorial
+	https://vimeo.com/89197723
+
+Bootstrap Template Starters(Currently Using JumboTron)
+
+	http://getbootstrap.com/getting-started/
+
+	more css sample pages are in the Poll Project/docs/examples section
+
+Way of adding charts to website
+	http://www.highcharts.com/
+	
+Pie Chart Example
+	
+	http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-	software/highcharts.com/tree/master/samples/highcharts/dem	o/pie-basic/
+
+
+Pie Chart Tutorial
+	http://www.tutorialspoint.com/highcharts/index.htm
+
+
+Poll Example
+	http://www.prepbootstrap.com/bootstrap-template/poll
+	
+	Can check multiple boxes(fix this, convert to radio?)
+	http://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
