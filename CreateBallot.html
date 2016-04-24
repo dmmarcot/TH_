@@ -29,6 +29,18 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<script>
+		var butclik = function(){
+		if(document.getElementById("startRace").clicked = true){
+			window.alert("Ballot created and race time set!");
+		}else{
+			window.alert("Ballot can't be created!");
+		}
+		
+		}
+	</script>	
+	
   </head>
 
   <body>
@@ -80,7 +92,7 @@
 			   
 			  
 			   
-             <p><a class="btn btn-info" href="#" role="button">Start Race &raquo;</a></p>
+             <p><a class="btn btn-info" id="startRace" href="Election Commissioner.html" name="startRace" role="button" onclick="butclik();">Start Race &raquo;</a></p>
             </div>
           </div>
         </div>
