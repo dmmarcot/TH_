@@ -31,13 +31,120 @@
     <![endif]-->
 	
 	<script>
-		var voteCheck = function(){
-		if(document.getElementById("vote").clicked = true){
-			window.confirm("Are you sure?(You can only vote once)");
-		}else{
-			window.alert("Election has not been created!");
-		}
-		
+		var radioCheck = function(){
+			if(document.getElementById('chk1').checked && document.getElementById('chk2').checked && document.getElementById('chk3').checked && document.getElementById('chk4').checked && document.getElementById('chk5').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk4').checked = false;
+				document.getElementById('chk5').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk2').checked && document.getElementById('chk3').checked && document.getElementById('chk4').checked && document.getElementById('chk5').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk4').checked = false;
+				document.getElementById('chk5').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk2').checked && document.getElementById('chk3').checked && document.getElementById('chk4').checked){
+			    window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk4').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk2').checked && document.getElementById('chk3').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk3').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk2').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk2').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk3').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk3').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk4').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk4').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk5').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk5').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk1').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk2').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk2').checked && document.getElementById('chk5').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk5').checked = false;
+				return false;
+			}else if(document.getElementById('chk2').checked && document.getElementById('chk4').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk4').checked = false;
+				return false;
+			}else if(document.getElementById('chk2').checked && document.getElementById('chk3').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk2').checked = false;
+				document.getElementById('chk3').checked = false;
+				return false;
+			}else if(document.getElementById('chk3').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk3').checked && document.getElementById('chk5').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk5').checked = false;
+				return false;
+			}else if(document.getElementById('chk3').checked && document.getElementById('chk4').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk3').checked = false;
+				document.getElementById('chk4').checked = false;
+				return false;
+			}else if(document.getElementById('chk4').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk4').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk4').checked && document.getElementById('chk5').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk4').checked = false;
+				document.getElementById('chk5').checked = false;
+				return false;
+			}else if(document.getElementById('chk5').checked && document.getElementById('chk6').checked){
+				window.alert("Only one can be checked!Please try again!");
+				document.getElementById('chk5').checked = false;
+				document.getElementById('chk6').checked = false;
+				return false;
+			}else if(document.getElementById('chk1').checked === false && document.getElementById('chk2').checked === false && document.getElementById('chk3').checked === false && document.getElementById('chk4').checked === false && document.getElementById('chk5').checked === false && document.getElementById('chk6').checked === false){
+				window.alert("Please select at least one!");
+				return false;
+			
+			}else{
+				window.alert("Your vote has been submitted, thank you!");
+				return true;
+			}
 		}
 	</script>	
 	
@@ -90,42 +197,42 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value=""> Alpha Epsilon Pi
+                                <input type="checkbox" id="chk1" value=""> Alpha Epsilon Pi
                             </label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value=""> Phi Delta Theta
+                                <input type="checkbox" id="chk2" value=""> Phi Delta Theta
                             </label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value=""> Sigma Alpha Epsilon
+                                <input type="checkbox" id="chk3" value=""> Sigma Alpha Epsilon
                             </label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="">  Theta Chi
+                                <input type="checkbox" id="chk4" value="">  Theta Chi
                             </label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value=""> Pi Kappa Alpha
+                                <input type="checkbox" id="chk5" value=""> Pi Kappa Alpha
                             </label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value=""> None
+                                <input type="checkbox" id="chk6" value=""> None
                             </label>
                         </div>
                     </li>
@@ -133,7 +240,7 @@
                 </ul>
             </div>
             <div class="panel-footer text-center">
-                <button href="ChartExample.html" type="button" id="vote"  onclick="voteCheck();" class="btn btn-primary btn-block btn-sm">
+                <button type="button" id="vote" onclick="radioCheck(); history.go(-1);" class="btn btn-primary btn-block btn-sm">
                     Vote</button>
                 <a href="ChartExample.html" class="small">View Result</a>
             </div>
