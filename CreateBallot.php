@@ -93,16 +93,19 @@
           <div class="panel panel-default">
             <div class="panel-heading">Create Ballot</div>
             <div class="panel-body">
+			<?php echo "Voting System: " . $_POST[]
+			
+			
 			   <?php   
-			       echo "<div class= 'my_div'>";
+			       
 			       for($x = 1; $x <= $_POST["raceList"]; $x++){
 				   
 				   echo ("<h1>Race #" . $x . "</h1><br>");
-				   echo ("Please click for candidates:<br><input type='button' value='+1 candidate' onClick='changeIt();'");
-				  
-				   echo "</div>";
-			   }
-				   
+				   echo ("Please click for candidates:<br>");
+				  for($y = 1; $y <= $_POST['canList']; $y++){
+					  echo ("<input type='text' name='txtbox'>");
+				  }
+				   }  
 			 ?>
 			
 			 

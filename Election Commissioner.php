@@ -80,8 +80,18 @@
 			How many races within ballot?
 			<input type="number" name="raceList" id="raceList">
 			<br>
+			How many candidates in each race?
+			<input type="number" name="canList" id="canList">
+			<br>
+			What type of voting system?
+			<select id="votSys">
+			<option value="Majority Rule" >Majority Rule</option>
+			<option value= "Pluarity" >Pluarity</option>
+			<option value="Proportional Representation" >Proportional Representation</option>
+			</select>
+			<br>
 			<input type="submit">
-			   
+			
              
 			  </form>
 			</div>
