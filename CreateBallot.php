@@ -67,7 +67,7 @@
             <span class="icon-bar"></span>
           </button>
 		  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/West_Virginia_Flying_WV_logo.svg/2000px-West_Virginia_Flying_WV_logo.svg.png" alt="WVU" style="width:50px;height:50px;">
-          <a class="navbar-brand" href="Election Commissioner.html">Home</a>
+          <a class="navbar-brand" href="Election Commissioner.php">Home</a>
 		  
          
 
@@ -93,22 +93,25 @@
           <div class="panel panel-default">
             <div class="panel-heading">Create Ballot</div>
             <div class="panel-body">
-			<div id="my_div">
-			       <h1>Race #1</h1>
-			  Please click for candidates:<br>
-				<input type="button" value="+1 Candidate" onClick="changeIt();">
-			  </div>
-			 <div id="my_div2">
-				<h1>Race #2</h1>
-			  Please click for Candidates:<br> 
-			   <input type="button" value="+1 Candidate" onClick="changeIt2();">	
-			 </div> 
+			   <?php   
+			       echo "<div class= 'my_div'>";
+			       for($x = 1; $x <= $_POST["raceList"]; $x++){
+				   
+				   echo ("<h1>Race #" . $x . "</h1><br>");
+				   echo ("Please click for candidates:<br><input type='button' value='+1 candidate' onClick='changeIt();'");
+				  
+				   echo "</div>";
+			   }
+				   
+			 ?>
+			
+			 
 			  <br>On what date would you like the election to start?
 			  <input type="date" name="dateRace"><br>
 			   
 			  
-			 <p><a class="btn btn-info"  href="Election Commissioner.html"  role="button" >Go Back &raquo;</a>
-             <a class="btn btn-info" id="startRace" href="Election Commissioner.html" name="startRace" role="button" onclick="butclik();">Finish Ballot &raquo;</a></p>
+			 <p><a class="btn btn-info"  href="Election Commissioner.php"  role="button" >Go Back &raquo;</a>
+             <a class="btn btn-info" id="startRace" href="Election Commissioner.php" name="startRace" role="button" onclick="butclik();">Finish Ballot &raquo;</a></p>
             </div>
           </div>
         </div>

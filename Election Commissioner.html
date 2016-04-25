@@ -75,61 +75,20 @@
           <div class="panel panel-default">
             <div class="panel-heading">Create Ballot</div>
             <div class="panel-body">
-			
+			<form action="CreatBallot.php" method="post">
 			How many races within ballot?
-			<select id = "raceList">
-			   <option value = "1">1</option>
-               <option value = "2">2</option>
-               <option value = "3">3</option>
-               <option value = "4">4</option>
+			<select id= "raceList" name="raceList">
+			   <option value = "1" name="race1">1</option>
+               <option value = "2" name="race2">2</option>
+               <option value = "3" name="race3">3</option>
+               <option value = "4" name="race4">4</option>
 			   </select><br>
 			
-			  How many Candidates per race(empty slots are fine)? 
-			  <select id = "candList">
-			   <option value = "1">1</option>
-               <option value = "2">2</option>
-               <option value = "3">3</option>
-               <option value = "4">4</option>
-			   <option value = "5">5</option>
-               <option value = "6">6</option>
-               <option value = "7">7</option>
-               <option value = "8">8</option>
-			   <option value = "9">9</option>
-               <option value = "10">10</option>
-               <option value = "11">11</option>
-               <option value = "12">12</option>
-			   <option value = "13">13</option>
-               <option value = "14">14</option>
-			   </select><br>
 			   
-			   What type of voting system? 
-			  <select id = "votingList">
-			   <option value = "1">Majority Rule</option>
-               <option value = "2">Proportional Representation</option>
-               <option value = "3">Pluarity Voting</option>
-			   
-			   </select><br>
-              
-			  How many days will election last? 
-			  <select id = "daysList">
-			   <option value = "1">1</option>
-               <option value = "2">2</option>
-               <option value = "3">3</option>
-               <option value = "4">4</option>
-			   <option value = "5">5</option>
-               <option value = "6">6</option>
-               <option value = "7">7</option>
-               <option value = "8">8</option>
-			   <option value = "9">9</option>
-               <option value = "10">10</option>
-               <option value = "11">11</option>
-               <option value = "12">12</option>
-			   <option value = "13">13</option>
-               <option value = "14">14</option>
-			   </select>
-			   
-             <p><a class="btn btn-info" href="CreateBallot.html" role="button">Create &raquo;</a></p>
-            </div>
+             <p><a class="btn btn-info" href="CreateBallot.php" role="button">Create &raquo;</a></p>
+			  </form>
+			</div>
+			
           </div>
         </div>
         

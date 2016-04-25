@@ -30,28 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<script>
-		var butclik = function(){
-		if(document.getElementById("startRace").clicked = true){
-			window.alert("Ballot created and election date set!");
-		}else{
-			window.alert("Ballot can't be created!");
-		}
-		
-		}
-		
-		function changeIt(){
-		var i = 1;
-		my_div.innerHTML = my_div.innerHTML +"<br><input type='text' name='mytext' + i>"
-		
-		}
-		
-		function changeIt2(){
-		var i = 1;
-		my_div2.innerHTML = my_div2.innerHTML +"<br><input type='text' name='mytext' + i>"
-		
-		}
-	</script>	
+	
 	
   </head>
 
@@ -67,8 +46,11 @@
             <span class="icon-bar"></span>
           </button>
 		  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/West_Virginia_Flying_WV_logo.svg/2000px-West_Virginia_Flying_WV_logo.svg.png" alt="WVU" style="width:50px;height:50px;">
-          <a class="navbar-brand" href="Election Commissioner.html">Home</a>
-		  
+          <a class="navbar-brand" href="Election Commissioner.php">Home</a>
+		  <a class="navbar-brand" href="Election Commissioner.php">Election Commissioner</a>
+		  <a class="navbar-brand" href="HeadOfStudentOrgs.html">Head of Student Orgs</a>
+		  <a class="navbar-brand" href="Student.html">Student</a>
+		  <a class="navbar-brand" href="ChartExample.html">Results</a>
          
 
         </div>
@@ -78,9 +60,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, Election Commissioner!</h1>
 		
-        <p>Please create ballot below!</p>
+        <h1>Hello, Election Commissioner!</h1>
+        <p>This is the page where the Election Commissioner can create ballots</p>
         
       </div>
     </div>
@@ -93,32 +75,23 @@
           <div class="panel panel-default">
             <div class="panel-heading">Create Ballot</div>
             <div class="panel-body">
-			<div id="my_div">
-			       <h1>Race #1</h1>
-			  Please click for candidates:<br>
-				<input type="button" value="+1 Candidate" onClick="changeIt();">
-			  </div>
-			 <div id="my_div2">
-				<h1>Race #2</h1>
-			  Please click for Candidates:<br> 
-			   <input type="button" value="+1 Candidate" onClick="changeIt2();">	
-			 </div> 
-			  <br>On what date would you like the election to start?
-			  <input type="date" name="dateRace"><br>
+			
+			<form action="CreateBallot.php" method="post">
+			How many races within ballot?
+			<input type="number" name="raceList" id="raceList">
+			<br>
+			<input type="submit">
 			   
-			  
-			 <p><a class="btn btn-info"  href="Election Commissioner.html"  role="button" >Go Back &raquo;</a>
-             <a class="btn btn-info" id="startRace" href="Election Commissioner.html" name="startRace" role="button" onclick="butclik();">Finish Ballot &raquo;</a></p>
-            </div>
+             
+			  </form>
+			</div>
+			
           </div>
         </div>
-        </div>
         
         
-       
+      </div>
 
-        
-          
       <hr>
 
       <footer>
