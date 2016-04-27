@@ -29,16 +29,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	
-	
   </head>
 
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
+	
       <div class="container">
+	  
         <div class="navbar-header">
+		
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -46,23 +46,21 @@
             <span class="icon-bar"></span>
           </button>
 		  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/West_Virginia_Flying_WV_logo.svg/2000px-West_Virginia_Flying_WV_logo.svg.png" alt="WVU" style="width:50px;height:50px;">
-          <a class="navbar-brand" href="Election Commissioner.php">Home</a>
+          <a class="navbar-brand" href="HeadOfStudentOrgs.php">Home</a>
 		  <a class="navbar-brand" href="Election Commissioner.php">Election Commissioner</a>
 		  <a class="navbar-brand" href="HeadOfStudentOrgs.php">Head of Student Orgs</a>
 		  <a class="navbar-brand" href="Student.php">Student</a>
 		  <a class="navbar-brand" href="ChartExample.php">Results</a>
-         
-
         </div>
         
+      </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-		
-        <h1>Hello, Election Commissioner!</h1>
-        <p>This is the page where the Election Commissioner can create ballots</p>
+        <h1>Hello, Head of student Orgs!</h1>
+        <p>This is the page where the head of student orgs can administrate the system</p>
         
       </div>
     </div>
@@ -70,47 +68,31 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">Create Ballot</div>
-            <div class="panel-body">
-			
-			<form action="CreateBallot.php" method="post">
-			How many races within ballot?
-			<input type="number" name="raceList" id="raceList">
-			<br>
-			How many candidates in each race?
-			<input type="number" name="canList" id="canList">
-			<br>
-			What type of voting system?
-			<select id="votSys" name="votSys">
-			<option value="Majority Rule" >Majority Rule</option>
-			<option value= "Pluarity" >Pluarity</option>
-			<option value="Proportional Representation" >Proportional Representation</option>
-			</select>
-			<br>
-			How many days do you want the election to last?
-			<select id="days" name="days">
-			<option value="1">1 day</option>
-			<option value="2">2 days</option>
-			<option value="3">3 days</option>
-			<option value="4">4 days</option>
-			<option value="5">5 days</option>
-			<option value="6">6 days</option>
-			<option value="7">7 days</option>
-			</select>
-			
-			<br>
-			<input type="submit">
-			
-             
-			  </form>
-			</div>
-			
-          </div>
+        <div class="col-md-6">
+          <h2>Create New Election Commissioner</h2>
+          <p>Create a new Election Commissioner </p>
+          <p><a class="btn btn-default" href="CreateElectionCommissioner.php" role="button">Create &raquo;</a></p>
         </div>
-        
+		<div class="col-md-6">
+          <h2>Create New Election</h2>
+          <p>Create a new Election</p>
+          <p><a class="btn btn-default" href="CreateElection.php" role="button">Create &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+          <h2>Remove Vote</h2>
+          <p>Remove a vote from an election.</p>
+          <p><a class="btn btn-danger" href="RemoveVote.php" role="button">Remove &raquo;</a></p>
+       </div>
+	   <div class="col-md-6">
+          <h2>Verify Results</h2>
+          <p>Verify completed elections.</p>
+          <p><a class="btn btn-danger" href="VerifyResults.php" role="button">Verify &raquo;</a></p>
+       </div>
+	   <div class="col-md-6">
+          <h2>Voter Turn-Out Statistics</h2>
+          <p>Statistics on the voter turn-out and demographics of past elections.</p>
+          <p><a class="btn btn-danger" href="Demographics.php" role="button">View &raquo;</a></p>
+       </div>
         
       </div>
 

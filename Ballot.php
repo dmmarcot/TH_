@@ -30,7 +30,28 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	
+	<script>
+		var butclik = function(){
+		if(document.getElementById("startRace").clicked = true){
+			window.alert("Ballot created and election date set!");
+		}else{
+			window.alert("Ballot can't be created!");
+		}
+		
+		}
+		
+		function changeIt(){
+		var i = 1;
+		my_div.innerHTML = my_div.innerHTML +"<br><input type='text' name='mytext' + i>"
+		
+		}
+		
+		function changeIt2(){
+		var i = 1;
+		my_div2.innerHTML = my_div2.innerHTML +"<br><input type='text' name='mytext' + i>"
+		
+		}
+	</script>	
 	
   </head>
 
@@ -47,10 +68,7 @@
           </button>
 		  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/West_Virginia_Flying_WV_logo.svg/2000px-West_Virginia_Flying_WV_logo.svg.png" alt="WVU" style="width:50px;height:50px;">
           <a class="navbar-brand" href="Election Commissioner.php">Home</a>
-		  <a class="navbar-brand" href="Election Commissioner.php">Election Commissioner</a>
-		  <a class="navbar-brand" href="HeadOfStudentOrgs.php">Head of Student Orgs</a>
-		  <a class="navbar-brand" href="Student.php">Student</a>
-		  <a class="navbar-brand" href="ChartExample.php">Results</a>
+		  
          
 
         </div>
@@ -60,9 +78,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-		
         <h1>Hello, Election Commissioner!</h1>
-        <p>This is the page where the Election Commissioner can create ballots</p>
+		
+        <p>Please create ballot below!</p>
         
       </div>
     </div>
@@ -73,47 +91,55 @@
         
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading">Create Ballot</div>
+            <div class="panel-heading">New Ballot</div>
             <div class="panel-body">
 			
-			<form action="CreateBallot.php" method="post">
-			How many races within ballot?
-			<input type="number" name="raceList" id="raceList">
-			<br>
-			How many candidates in each race?
-			<input type="number" name="canList" id="canList">
-			<br>
-			What type of voting system?
-			<select id="votSys" name="votSys">
-			<option value="Majority Rule" >Majority Rule</option>
-			<option value= "Pluarity" >Pluarity</option>
-			<option value="Proportional Representation" >Proportional Representation</option>
-			</select>
-			<br>
-			How many days do you want the election to last?
-			<select id="days" name="days">
-			<option value="1">1 day</option>
-			<option value="2">2 days</option>
-			<option value="3">3 days</option>
-			<option value="4">4 days</option>
-			<option value="5">5 days</option>
-			<option value="6">6 days</option>
-			<option value="7">7 days</option>
-			</select>
+			  
+			 
+			  <br>
+			  <h1>Candidates Race #1: </h1>
+			  <br>
+			  
+			  <?php
+				echo "RaceNum value: " . "$_POST[$raceNum]";
+			  
+			  ?>
+			  
+			  <?php 
+			  $candidates = $_POST['candidate'];
+			  for($i = 0; $i < count($candidates); $i++){
+				$race1 = fopen("race1.txt" , "a") or die("Unable to open file!");
+					$name1 = $candidates[$i];
+					fwrite($race1,$name1 . "\r\n");
+				
+				fclose($race1);
+		      }
+			?>
 			
-			<br>
-			<input type="submit">
+			<?php
+				$myFile = fopen("race1.txt", "r") or die("Unable to open file!");
+				echo fread($myFile,filesize("race1.txt")) . "<br>";
+				fclose($myFile);
 			
-             
-			  </form>
-			</div>
 			
+			?>
+			
+			  
+			 
+			   
+			  
+			 
+             <a class="btn btn-info" id="startRace" href="Election Commissioner.php" name="startRace" role="button" onclick="butclik();">Finish Ballot &raquo;</a></p>
+            </div>
           </div>
+        </div>
         </div>
         
         
-      </div>
+       
 
+        
+          
       <hr>
 
       <footer>

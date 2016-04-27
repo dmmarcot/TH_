@@ -93,28 +93,39 @@
           <div class="panel panel-default">
             <div class="panel-heading">Create Ballot</div>
             <div class="panel-body">
-			<?php echo "Voting System: " . $_POST[]
 			
+			<form action="Ballot.php" method="post">
+			<?php echo "Voting System: "  . $_POST['votSys'] . "<br>";
+				  echo "Election will be open for: " . $_POST['days'] . " days";
+			
+			?>
 			
 			   <?php   
-			       
+			       error_reporting(E_ALL);
+				   $raceNum = $_POST["raceList"];
 			       for($x = 1; $x <= $_POST["raceList"]; $x++){
 				   
 				   echo ("<h1>Race #" . $x . "</h1><br>");
-				   echo ("Please click for candidates:<br>");
+				   echo ("Please fill in candidates:<br>");
 				  for($y = 1; $y <= $_POST['canList']; $y++){
-					  echo ("<input type='text' name='txtbox'>");
+					  echo "<input type='text' name='candidate[]'>";
 				  }
-				   }  
+				   }
+				  
+					
 			 ?>
+		
 			
 			 
 			  <br>On what date would you like the election to start?
 			  <input type="date" name="dateRace"><br>
 			   
 			  
-			 <p><a class="btn btn-info"  href="Election Commissioner.php"  role="button" >Go Back &raquo;</a>
-             <a class="btn btn-info" id="startRace" href="Election Commissioner.php" name="startRace" role="button" onclick="butclik();">Finish Ballot &raquo;</a></p>
+			 
+              <p><input type="submit" name="submit" value="Submit Values"></p>
+			 </form>
+			 
+			 
             </div>
           </div>
         </div>

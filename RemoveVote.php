@@ -30,7 +30,16 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	
+	<script>
+		var createElec = function(){
+		if(document.getElementById("createElec").clicked = true){
+			window.confirm("Are you sure you wish to remove vote?(changes can't be undone)");
+		}else{
+			window.alert("The Vote has NOT been removed!");
+		}
+		
+		}
+	</script>	
 	
   </head>
 
@@ -46,10 +55,7 @@
             <span class="icon-bar"></span>
           </button>
 		  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/West_Virginia_Flying_WV_logo.svg/2000px-West_Virginia_Flying_WV_logo.svg.png" alt="WVU" style="width:50px;height:50px;">
-          <a class="navbar-brand" href="Election Commissioner.php">Home</a>
-		  <a class="navbar-brand" href="Election Commissioner.php">Election Commissioner</a>
-		  <a class="navbar-brand" href="HeadOfStudentOrgs.php">Head of Student Orgs</a>
-		  <a class="navbar-brand" href="Student.php">Student</a>
+          <a class="navbar-brand" href="HeadOfStudentOrgs.php">Home</a>
 		  <a class="navbar-brand" href="ChartExample.php">Results</a>
          
 
@@ -60,9 +66,8 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-		
-        <h1>Hello, Election Commissioner!</h1>
-        <p>This is the page where the Election Commissioner can create ballots</p>
+        <h1>Hello, Head of Student Orgs!</h1>
+        <p>Please specify which vote you want removed and from which election!</p>
         
       </div>
     </div>
@@ -73,47 +78,46 @@
         
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading">Create Ballot</div>
+            <div class="panel-heading">Remove Vote</div>
             <div class="panel-body">
 			
-			<form action="CreateBallot.php" method="post">
-			How many races within ballot?
-			<input type="number" name="raceList" id="raceList">
-			<br>
-			How many candidates in each race?
-			<input type="number" name="canList" id="canList">
-			<br>
-			What type of voting system?
-			<select id="votSys" name="votSys">
-			<option value="Majority Rule" >Majority Rule</option>
-			<option value= "Pluarity" >Pluarity</option>
-			<option value="Proportional Representation" >Proportional Representation</option>
-			</select>
-			<br>
-			How many days do you want the election to last?
-			<select id="days" name="days">
-			<option value="1">1 day</option>
-			<option value="2">2 days</option>
-			<option value="3">3 days</option>
-			<option value="4">4 days</option>
-			<option value="5">5 days</option>
-			<option value="6">6 days</option>
-			<option value="7">7 days</option>
-			</select>
+			  Please enter student ID#: 
+			  <input type="number" id="studentID" name="elecCom"><br>
+			  
+			  For which election do you want their vote removed?:
+			  <select id = "elecList">
+			   <option value = "1">1</option>
+               <option value = "2">2</option>
+               <option value = "3">3</option>
+               <option value = "4">4</option>
+			   <option value = "5">5</option>
+               <option value = "6">6</option>
+               <option value = "7">7</option>
+               <option value = "8">8</option>
+			   <option value = "9">9</option>
+               <option value = "10">10</option>
+               <option value = "11">11</option>
+               <option value = "12">12</option>
+			   <option value = "13">13</option>
+               <option value = "14">14</option>
+			   </select><br>
+			  
 			
-			<br>
-			<input type="submit">
-			
-             
-			  </form>
-			</div>
-			
+			  
+			   
+			  
+			   
+             <p><a class="btn btn-info" href="HeadOfStudentOrgs.php" id="createElec"  role="button" onclick="createElec();">Submit &raquo;</a></p>
+            </div>
           </div>
+        </div>
         </div>
         
         
-      </div>
+       
 
+        
+          
       <hr>
 
       <footer>
